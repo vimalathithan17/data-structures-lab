@@ -38,7 +38,7 @@ void main()
 	}
 	int missing_val=missing_element(arr,num);
 	printf("the missing value is: %d",missing_val);
-
+	free(arr);
 }
 void input(int **arr,int *num)
 {

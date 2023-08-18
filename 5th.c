@@ -27,6 +27,7 @@ void main()
 	{
 		printf("There is no repeating element in the given array.");
 	}
+	free(arr);
 }
 void input(int **arr,int *num)
 {

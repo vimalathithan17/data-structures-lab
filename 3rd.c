@@ -20,6 +20,7 @@ void main()
 	sort(arr,num);
 	printf("The sorted array is:");
 	print(arr,num);
+	free(arr);
 }
 void input(int **arr,int *num)
 {
