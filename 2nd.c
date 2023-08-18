@@ -1,6 +1,7 @@
 /*
 2.	Given an array arr[] and an integer K where K is smaller than size of array, 
-the task is to find the Kth smallest element in the given array. It is given that all array elements are distinct.
+the task is to find the Kth smallest element in the given array. 
+It is given that all array elements are distinct.
 3.	Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
 4.	An element is called a peak element if its value is not smaller than the value of its adjacent elements(if they exists). 
 Given an array arr[] of size N, Return the index of any one of its peak elements.
@@ -15,7 +16,6 @@ void input(int **arr,int *num);
 void sorted(int *arr,int num,int *sorted_asc,int *sorted_desc);
 void is_repeated(int *arr,int num,int *repeated);
 int find_smallest(int *arr,int num,int k, int sorted_asc);
-//int missing_element(int *arr,int num,int repeated_index,int sorted_asc,int sorted_desc);
 void main()
 {
 	int *arr;
@@ -32,6 +32,7 @@ void main()
 		{
 			break;
 		}
+		printf("The given array has duplicate elements.Please enter distinct values.\n");
 		free(arr);
 	}
 	print(arr,num);//1
@@ -54,7 +55,6 @@ void main()
 		sorted_asc=1;
     }
     //printf("asc %d desc %d\n",sorted_asc,sorted_desc);
-    
     //print(arr,num);//2
 	//printf("repeated %d,repeated index %d\n",repeated,repeated_index);
 	//print(arr,num);//3
@@ -106,7 +106,6 @@ void sort(int *arr,int num){
 				printf("inf i %d j %d\n",i, j);
 				print(arr,num);
 			}
-		
 		}
 		//printf("outer");
 		//print(arr,num);
@@ -151,7 +150,6 @@ void sorted(int *arr,int num,int *sorted_asc,int *sorted_desc)
 				}
 			}
 		}
-		
 	}
 	if(is_sorted)
 	{
@@ -178,9 +176,8 @@ void is_repeated(int *arr,int num,int *repeated)
 					*repeated=1;
 					return ;
 				}
-		
        }
-       
+       *repeated=0;
 }
 int find_smallest(int *arr,int num,int k, int sorted_asc)
 {

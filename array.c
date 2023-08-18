@@ -61,7 +61,7 @@ void input(int **arr,int *num)
 		scanf("%d",num);
 		if (*num==1)
 		{
-			printf("enter a value greater than 1\n",*num);
+			printf("enter a value greater than 1\n");
 			continue;
 		}	
 		break;
@@ -72,12 +72,12 @@ void input(int **arr,int *num)
 	int i;
 	for(i=0;i<*num;i++)
 	{
-		printf("enter the element at index %d:",i);
+		printf("enter the element at index %d(less than %d):",i,*num+1);
 		int input_num;
 		scanf("%d",&input_num);
 		if(input_num>=*num+1)
 		{
-			printf("enter a value less than %d\n",*num);
+			printf("enter a value less than %d\n",*num+1);
 			i--;
 			continue;
 		}
@@ -86,7 +86,7 @@ void input(int **arr,int *num)
 	}
 
 }
-void sort(int *arr,int num){
+voidsort(int *arr,int num){
 	int i;
 	for(i=0;i<num;i++)
 	{
