@@ -1,6 +1,7 @@
 /*
 
-1.	Given an unsorted array of integers, sorr[0..n-1] :Given an unsorted array of integers, sort the array into a wave array. 
+1.	Given an unsorted array of integers, sorr[0..n-1] :
+Given an unsorted array of integers, sort the array into a wave array. 
 An array arr[0..n-1] is sorted in wave form if:
 arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= …..
 
@@ -9,10 +10,12 @@ arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= …..
 If there is such a triplet present in array, then print the triplet and return true. Else return false.
 
 
-3.	Given an array arr[] of integers and a number x, the task is to find the smallest subarray with a sum greater 
+3.	Given an array arr[] of integers and a number x, 
+the task is to find the smallest subarray with a sum greater 
 than the given value. 
 
-4.	Given a sorted array of n distinct integers where each integer is in the range from 0 to m-1 and m > n. 
+4.	Given a sorted array of n distinct integers 
+where each integer is in the range from 0 to m-1 and m > n. 
 Find the smallest number that is missing from the array. 
 
 5.	Find the majority element in the array. 
