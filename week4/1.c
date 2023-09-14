@@ -27,11 +27,11 @@ void main()
 		{
 			printf("Enter your choice:");
 			scanf("%d",&choice);
-			if(choice>=1 || choice <=4)
+			if(choice>=1 && choice <=4)
 			{
 				break;
 			}
-			printf("!! Enter a valid choice !!");
+			printf("!! Enter a valid choice !!\n");
 		}
 		
 		switch(choice)
@@ -83,11 +83,19 @@ node * traverse(node *head,int display)
 {
 	if(head==NULL)
 	{
+		if(display)
+		{
+			printf("!! The linked list has no elements to display !!\n");
+		}
 		return NULL;
 	}
 	else
 	{
 		node* temp=head;
+		if(display)
+		{
+			printf("the linked list :\n");
+		}
 		while(temp->next!=NULL)
 		{
 			if(display)
@@ -109,6 +117,7 @@ node* swap_adjacent(node *head,int num)
 {
 	if(num==-1)
 	{
+		printf("!! There are no elements in the linked list to perform swap !!");
 		return NULL;
 	}
 	else

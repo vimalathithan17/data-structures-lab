@@ -96,9 +96,11 @@ void find_triplet(int *arr,int num)
 				if(((*(arr+i))+(*(arr+j))+(*(arr+k)))==val)
 				{
 					printf("the tripplets are %d,%d,%d",*(arr+i),*(arr+j),*(arr+k));
+					return;
 				}
 			}
 		}
 	}
+	printf("false");
 }
 

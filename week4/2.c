@@ -27,11 +27,11 @@ void main()
 		{
 			printf("Enter your choice:");
 			scanf("%d",&choice);
-			if(choice>=1 || choice <=4)
+			if(choice>=1 && choice <=4)
 			{
 				break;
 			}
-			printf("!! Enter a valid choice !!");
+			printf("!! Enter a valid choice !!\n");
 		}
 		
 		switch(choice)
@@ -44,7 +44,6 @@ void main()
 				break;
 			case 3:
 				find_greater(&head,num);
-				//head=swap_adjacent(head,num);
 				break;
 			case 4:
 				exit=1;
@@ -84,11 +83,20 @@ node * traverse(node *head,int display)
 {
 	if(head==NULL)
 	{
+		if(display)
+		{
+			printf("!! The linked list has no elements to display !!\n");
+		}
 		return NULL;
+		
 	}
 	else
 	{
 		node* temp=head;
+		if(display)
+		{
+			printf("the linked list :\n");
+		}
 		while(temp->next!=NULL)
 		{
 			if(display)
@@ -109,7 +117,7 @@ node * traverse(node *head,int display)
 void find_greater(node **head,int num)
 {
 	int value,i,val_index;
-	printf("enter a value:");
+	printf("Enter a value:");
 	scanf("%d",&value);
 	node* val_node=NULL,*temp=*head;
 	for(i=0;i<num+1;i++)
@@ -118,15 +126,15 @@ void find_greater(node **head,int num)
 		{
 			printf("%p %d %d\n",temp,temp->data,i);
 			val_node=temp;
-			val_index=i;
+			val_index=++i;
 			break;
 		}
 		temp=temp->next;
 	}
-	printf("hi");
+
 	if(val_node==NULL)
 	{
-		printf("no node contains the given value");
+		printf("!! No node contains the given value !!");
 	}
 	else
 	{
@@ -140,10 +148,8 @@ void find_greater(node **head,int num)
 			node *next_=val_node,*smaller=NULL;
 			for(i=val_index;i<num;i++)
 			{
-				printf("sf");
 				if(next_->next->data<value)
 				{
-					printf("hhh");
 					smaller=next_->next;
 					next_->next=smaller->next;
 					next_=next_->next;
@@ -157,6 +163,7 @@ void find_greater(node **head,int num)
 							{
 								*head=smaller;
 								smaller->next=temp;
+ 								val_index+=1;
 								break;
 							}
 						}
@@ -166,14 +173,18 @@ void find_greater(node **head,int num)
 							{
 								smaller->next=temp->next;
 								temp->next=smaller;
+								val_index+=1;
 								break;
 							}
 							temp=temp->next;
 						}
 					}
 				}
+				else
+				{
+					next_=next_->next;
+				}
 			}	
 		}	
 	}	
 }
-
