@@ -1,14 +1,9 @@
 /*
 1. Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N. 
 Find the missing element.
-2.	Given an array arr[] and an integer K where K is smaller than size of array, 
-the task is to find the Kth smallest element in the given array. It is given that all array elements are distinct.
-3.	Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
-4.	An element is called a peak element if its value is not smaller than the value of its adjacent elements(if they exists). 
-Given an array arr[] of size N, Return the index of any one of its peak elements.
-5.	Given an array arr[] of size n, find the first repeating element. 
-The element should occur more than once and the index of its first occurrence should be the smallest.
 */
+
+//O(n)
 #include<stdio.h>
 #include<stdlib.h>
 void sort(int *arr,int num);
@@ -40,7 +35,7 @@ void main()
 	printf("the missing value is: %d",missing_val);
 	free(arr);
 }
-void input(int **arr,int *num)
+void input(int **arr,int *num)//O(n)
 {
 	while(1)
 	{
@@ -74,7 +69,7 @@ void input(int **arr,int *num)
 
 }
 
-void print(int *arr,int num)
+void print(int *arr,int num)//O(n)
 {
 	printf("[ ");
 	int i;
@@ -85,7 +80,7 @@ void print(int *arr,int num)
 	printf("\b]\n");
 }
 
-void is_repeated(int *arr,int num,int *repeated)
+void is_repeated(int *arr,int num,int *repeated)//O(n^2)
 {
 		//printf("inrepeated");
 		int i;
@@ -106,7 +101,7 @@ void is_repeated(int *arr,int num,int *repeated)
        *repeated=0;
        
 }
-int missing_element(int *arr,int num)
+int missing_element(int *arr,int num)//O(n)
 {
 	int i,missing_val=0;
 	for(i=1;i<=num;i++)

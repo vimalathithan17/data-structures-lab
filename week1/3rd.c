@@ -1,9 +1,5 @@
 /*
 3.	Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
-4.	An element is called a peak element if its value is not smaller than the value of its adjacent elements(if they exists). 
-Given an array arr[] of size N, Return the index of any one of its peak elements.
-5.	Given an array arr[] of size n, find the first repeating element. 
-The element should occur more than once and the index of its first occurrence should be the smallest.
 */
 #include<stdio.h>
 #include<stdlib.h>
